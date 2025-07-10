@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT 3</title>
@@ -10,6 +10,7 @@
 
   div{
     color:black;
+   
   }
 
   .top{
@@ -22,11 +23,16 @@
     right:10px;
   }
 
-  .con{
-    background-color: lightgray;
-    padding:10px;
-    position:relative;
-  }
+  .con {
+  background-color: lightgray;
+  padding: 10px;
+  position: fixed; /* changed from sticky to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 
   a{
     text-decoration: none;
@@ -37,8 +43,6 @@
     width:100px;
     position: relative;
   }
-
-  /* 👇 Updated image style for full screen cover */
   img{
     width: 100vw;
     height: 100vh;
@@ -150,12 +154,11 @@
         <div class="top">
             <a href="">SEA</a>
         </div>
-        <div class="down">
-            <a href="">HOME</a>
-             <a href="">ABOUT</a>
-              <a href="">CONTACTS</a>
-              <a href="">PROJECTS</a>
-        </div>
+       <div class="down">
+  <a href="#ABOUT">ABOUT</a>
+  <a href="#CONTACTS">CONTACTS</a>
+  <a href="#PROJECTS">PROJECTS</a>
+</div>
     </nav>
     <div class="imgicon">
         <img src="https://cdn.magicdecor.in/com/2022/10/30090017/1040502451.jpg">
@@ -203,7 +206,7 @@
     </div>
     <hr>
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;">
-  <center><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ABOUT</h2></center>
+  <center><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ABOUT</h2></center>
 </div>
   <text align="center">
   <center>
@@ -271,6 +274,8 @@
     <button class="button">SEND MESSAGE</button>
   </div>
 <hr>
+
+<center><h3>PROJECTS</h3></center>
 &nbsp;&nbsp;&nbsp;&nbsp;<div><img src="https://treasuretripin.com/wp-content/uploads/2023/12/SECRETS-TO-EXPERIENCE-IN-TAJ-MAHAL-1200x900.png" ></div>
 <div class="hari">POWERED BY VENKATA KRISHNA FROM 10K(50R)</div>
 </div>
