@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Harish's Clock</title>
+    <style>
+        body {
+            background: orangered;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .harishClock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+        .timeRow {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .harishLabel {
+            text-align: center;
+            font-size: 32px;
+            background-color: whitesmoke;
+            margin-bottom: 10px;
+            padding: 0 10px;
+        }
+        .harishBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .harishPanel {
+            width: 120px;
+            height: 140px;
+            background: black;
+            border-radius: 12px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            border-top: 4px solid gray;
+            border-bottom: 4px solid gray;
+        }
+        .dateBox {
+            font-size: 35px;
+            font-weight: bold;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 10px;
+        }
+        .redText {
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="harishClock">    
+        <div class="timeRow">
+            <div class="harishBox">
+                <div class="harishLabel">HRS</div>
+                <div class="harishPanel" id="harish">00</div>
+            </div>
+            <div class="harishBox">
+                <div class="harishLabel">MIN</div>
+                <div class="harishPanel" id="harish1">00</div>
+            </div>
+            <div class="harishBox">
+                <div class="harishLabel">SEC</div>
+                <div class="harishPanel" id="harish2">00</div>
+            </div>
+        </div>
+        <div class="dateBox" id="dateBox">
+            Monday — January 01
+        </div>
+    </div>
+    <script>
+        function updateHarishClock() {
+            const now = new Date();
+            let h = String(now.getHours()).padStart(2, '0');
+            let m = String(now.getMinutes()).padStart(2, '0');
+            let s = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById("harish").textContent = h;
+            document.getElementById("harish1").textContent = m;
+            let secPanel = document.getElementById("harish2");
+            secPanel.textContent = s;
+            if (s.endsWith("1")) {
+                secPanel.style.color = "white";
+            }
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const months = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            let dayName = days[now.getDay()];
+            let monthName = months[now.getMonth()];
+            let date = String(now.getDate()).padStart(2, '0');
+            document.getElementById("dateBox").textContent =
+                `${dayName} — ${monthName} ${date}`;
+        }
+        setInterval(updateHarishClock, 1000);
+        updateHarishClock();
+    </script>
+</body>
+</html>
