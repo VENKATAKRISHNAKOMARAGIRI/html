@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Photo Album</title>
+
+<style>
+body {
+  background: black; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding:10px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.wave {
+  float: none;
+  margin: 0;
+  animation: wave ease-in-out 0.5s infinite alternate;
+  transform-origin: center -36px;
+  position: relative;
+}
+
+.wave:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.wave img {
+  border: 5px solid white;
+  display: block;
+  width: 200px;
+  height: 250px;
+}
+
+.wave figcaption {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.wave:after{
+  content: '';
+  position: absolute;
+  width: 20px; 
+  height: 20px;
+  border: 1.5px solid white;
+  top: -10px; 
+  left: 50%;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(35deg);
+}
+       
+.wave:before{
+  content: '';
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  display: block;
+  height: 44px;
+  width: 47px;
+  /* background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png); */
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  z-index: 16;
+}
+        
+@keyframes wave {
+  0% { 
+    transform: rotate(10deg); 
+  }
+  100% { 
+    transform: rotate(-10deg); 
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div style="margin-top:20px; display:flex; flex-wrap:nowrap; justify-content:center; gap:20px;">
+
+  <figure class="wave">
+    <img src="https://i.pinimg.com/736x/fe/5b/7c/fe5b7c740ad0121a1c2c2d2575afb956.jpg" alt="RED">
+    <figcaption>RED</figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="https://e0.pxfuel.com/wallpapers/642/182/desktop-wallpaper-ram-pothineni-new-vunnadhi-okate-zindagi-movie-latest.jpg" alt="VUNNADHI OKATE ZINDAGI">
+    <figcaption>VUNNADHI OKATE ZINDAGI</figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZq3_CIZecXlhnSdarfZ20VgldD7WDQvvog&s" alt="ISMART SHANKAR">
+    <figcaption>ISMART SHANKAR</figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTJgWi1fTVAPq4XLq84FsWpHmQ5e2PsfE8Ig&s" alt="ANDHRA KING THALUKA">
+    <figcaption>ANDHRA KING THALUKA</figcaption>
+  </figure>
+</div>
+</body>
+</html>
